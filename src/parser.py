@@ -1,5 +1,9 @@
+import utils
+
+
 def main():
-    pass
+    max_pages = utils.analysis_pagination()
+    print(max_pages)
 
 
 if __name__ in '__main__':
