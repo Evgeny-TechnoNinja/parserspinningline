@@ -16,8 +16,9 @@ _Предварительно должен быть установлен Python,
 2. `cd parserspinningline`
 3. `python3 -m venv venv`
 4. `source venv/bin/activate`
-5. `pip install -r requirements.txt`
-6. `cd src`
-7. `python parser.py`
+5. `pip install -r requirements.txt` 
+6. `pip install --upgrade pip`
+7. `cd src`
+8. `python parser.py`
 
 Результат работы смотреть в каталоге output, который появиться в каталоге parserspinningline
