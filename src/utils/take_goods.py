@@ -1,9 +1,8 @@
-from typing import Dict, Any
-
 from config import TARGET_URL, TARGET_PATH, MARKUP_ANALYZER, NAVIGATION_NAME, TYPES_GOODS  # noqa
 from .get_document import get_document
 from bs4 import BeautifulSoup
 from tqdm import tqdm
+
 
 def take_goods(num):
     """Takes all the necessary goods from the online store
