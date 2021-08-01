@@ -41,3 +41,5 @@ INTRO = fr"""
     ┴  ┴ ┴┴└─└─┘└─┘┴└─  └─┘┴  ┴┘└┘┘└┘┴┘└┘└─┘┴─┘┴┘└┘└─┘
     From here {TARGET_URL} we take this "Yummy"           
     """
+
+success = 'Ready! See the output folder...'

@@ -13,7 +13,7 @@ def main():
                                 config.TABLE_SETTINGS[value]['headings'],
                                 config.TABLE_SETTINGS[value]['column_width'],
                                 config.TABLE_SETTINGS[value]['column'])
-    print('Ready! See the output folder...')
+    print(config.success)
 
 
 if __name__ in '__main__':
