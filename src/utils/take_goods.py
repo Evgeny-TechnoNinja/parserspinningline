@@ -3,7 +3,7 @@ from typing import Dict, Any
 from config import TARGET_URL, TARGET_PATH, MARKUP_ANALYZER, NAVIGATION_NAME, TYPES_GOODS  # noqa
 from .get_document import get_document
 from bs4 import BeautifulSoup
-
+from tqdm import tqdm
 
 def take_goods(num):
     """Takes all the necessary goods from the online store
@@ -11,7 +11,7 @@ def take_goods(num):
     :return: list of dictionaries where each dictionary is a product with its parameters
     """
     goods = []
-    for current_number in range(1, num + 1):
+    for current_number in tqdm(range(1, num + 1), desc='Pick up the goods'):
         payload = {NAVIGATION_NAME: str(current_number)}
         document = get_document(TARGET_URL + TARGET_PATH, parameter=payload)
         soup = BeautifulSoup(document, MARKUP_ANALYZER)
@@ -24,7 +24,7 @@ def take_goods(num):
             blank['link_picture'] = item.select('a.b-prod__img-href>meta[itemprop]')[0]['content']
             values = item.select('span.b-prod-prop__val')
             blank['product_code'] = values[0].get_text()
-            blank['price'] = item.select('div.b-prod__price>span.b-prod__price_red')[0].get_text()
+            blank['price'] = item.select('div.b-prod__price>span.b-prod__price_red')[0].get_text() + ' руб'
             if part_name == TYPES_GOODS[0]:
                 field_names = ['number', 'breaking_load', 'package']
                 data = []
