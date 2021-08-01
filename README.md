@@ -9,7 +9,7 @@
 
 ## Как пользоваться
 
-_Предварительно должен быть установлен Python, Pip, и система управления версиями Git_
+_Предварительно должен быть установлен Python, Pip, система управления версиями Git_
 
 **Приступаем!**
 1. `git clone https://github.com/Evgeny-TechnoNinja/parserspinningline.git`
