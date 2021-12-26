@@ -1,6 +1,6 @@
 # Parser Spinningline
 
-Парсер интернет-магазина [spinningline.ru](https://spinningline.ru/)
+Парсинг интернет-магазина  [spinningline.ru](https://spinningline.ru/)
 
 ## Что делает
 
